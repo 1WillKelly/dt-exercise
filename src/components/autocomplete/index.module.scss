@@ -1,0 +1,55 @@
+@import "../../_variables.scss";
+
+$searchbar-width: 300px;
+
+.autocomplete-wrapper {
+    position: relative;
+
+    .searchbar-input {
+        width: $searchbar-width;
+        height: 40px;
+        border: none;
+        padding-left: 52px;
+        background-color: #EDF0F2;
+        background: url('../../assets/images/search-icon.svg') no-repeat left 18px center, #EDF0F2;
+        border-radius: 50px;
+    }
+    
+    .suggestions-list {
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    .no-suggestions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        color: $color-black-60;
+    }
+
+    .suggestions-list,
+    .no-suggestions {
+        position: absolute;
+        top: 48px;
+        left: 12px;
+        z-index: 10;
+        width: calc(#{$searchbar-width} - 24px);
+        max-height: 175px;
+        overflow-y: auto;
+        background-color: white;
+        box-shadow: 0 4px 15px rgba(black, 0.18);
+        border-radius: 6px;
+    }
+    
+    .suggestion {
+        padding: 0.7em 1.2em;
+        color: $color-black-70;
+        cursor: pointer;
+    
+        &:hover {
+            color: $color-black-90;
+            background-color: rgba(black, 0.04);
+        }
+    }
+}

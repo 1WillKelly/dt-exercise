@@ -1,0 +1,48 @@
+@import "../../../_variables.scss";
+
+$toggle-height: 42px;
+
+.results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $gutter-width;
+    height: 74px;
+    border-bottom: 1px solid $border-color;
+    background-color: white;
+}
+
+.mens-womens-toggle {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    border-radius: 50px;
+    background-color: rgba($color-secondary, 0.05);
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba($color-secondary, 0.7);
+        width: 160px;
+
+        &.active {
+            color: $color-secondary;
+            height: calc(#{$toggle-height} - 4px);
+            border-radius: 50px;
+            margin-left: 2px;
+            background-color: white;
+            box-shadow: 0 3px 10px -2px rgba(0,0,0,0.09);
+        }
+    }
+}
+
+.sort-by  {
+    display: flex;
+    align-items: center;
+
+    p {
+        color: $color-black-60;
+        margin-right: 10px;
+    }
+}

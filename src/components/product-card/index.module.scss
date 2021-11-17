@@ -1,0 +1,73 @@
+@import "../../_variables.scss";
+
+.product-card {
+    position: relative;
+    padding: 18px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(black, 0.05);
+
+    .product-card-upper {
+        padding-bottom: 20px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        height: 0;
+        padding-bottom: 84%;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #F2F2F2;
+
+        img {
+            width: 84%;
+            position: absolute;
+            left: 7%;
+        }
+    }
+
+    .product-info {
+
+        h4 {
+            margin-top: 10px;
+            color: $color-black-80;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .category {
+            margin-top: 12px;
+            color: $color-black-40;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .price {
+            display: flex;
+            margin-top: 8px;
+            color: $color-black-80;
+            font-weight: 600;
+            font-size: 28px;
+
+            span {
+                margin: 2px 2px 0 0;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.stars {
+    display: flex;
+    margin-top: 10px;
+
+    span {
+        display: block;
+        height: 18px;
+        width: 18px;
+        background: url('../../assets/images/start-sprite.svg') no-repeat;
+        background-position: 0 0;
+        background-size: 54px 18px;
+    }
+}

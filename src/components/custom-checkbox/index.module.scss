@@ -1,0 +1,82 @@
+@import "../../_variables.scss";
+
+$checkbox-size: 16px;
+$checkbox-transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    label {
+        font-size: 14px;
+        color: $color-black-60;
+        position: absolute;
+        z-index: 2;
+        padding-left: 23px;
+        cursor: pointer;
+        transition: $checkbox-transition;
+    }
+
+    input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+        &:checked {
+
+            ~ .check {
+                border-color: $color-primary;
+                box-shadow: 0px 0px 0px 15px $color-primary inset;
+
+                &::after{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            ~ label {
+                color: $color-black-90;
+            }
+        }
+    }
+
+    .check {
+        width: $checkbox-size;
+        height: $checkbox-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 2px;
+        background-color: white;
+        border: 1px solid #BBB;
+        box-shadow: 0px 0px 0px 0px $color-primary inset;
+        transition: $checkbox-transition;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            transform: scale(0);
+            background-size: 12px;
+            background-image: url('../../assets/images/checkmark.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.1s;
+        }
+    }
+
+    &:hover {
+        label {
+            color: $color-black-90;
+        }
+
+        .check {
+            border-color: $color-primary;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../../_variables.scss";
+
+.results-grid-wrapper {
+    padding: $gutter-width;
+
+    .results-grid {
+        display: grid;
+        grid-column-gap: 22px;
+        grid-row-gap: $gutter-width;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+}
+
+// Render the stars
+
+@include review-stars;

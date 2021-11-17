@@ -1,0 +1,25 @@
+@import "../../_variables.scss";
+
+.marquee-banner {
+    position: relative;
+    height: $marquee-height;
+    width: 100%;
+    padding: 0 $gutter-width;
+    background-color: #F6F6F6;
+    overflow: hidden;
+
+    h1 {
+        position: relative;
+        z-index: 1;
+        margin: 110px 0 0 72px;
+        font-size: 80px;
+        color: $color-secondary;
+    }
+
+    img {
+        position: absolute;
+        right: 10%;
+        bottom: -180px;
+        height: 850px;
+    }
+}

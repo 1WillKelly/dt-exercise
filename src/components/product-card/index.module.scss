@@ -2,6 +2,9 @@
 
 .product-card {
     position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
     padding: 18px;
     border: 1px solid $border-color;
     border-radius: 6px;
@@ -71,3 +74,4 @@
         background-size: 54px 18px;
     }
 }
+

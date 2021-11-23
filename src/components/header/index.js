@@ -6,26 +6,33 @@ const Header = () => {
 
     return (
         <header>
-            <a
-                className={Styles['header-logo']}
-                href="/"
-            >
-                <img
-                    src={allbirdsLogo}
-                    alt='Allbirds Logo'
-                />
-            </a>
-            <nav>
+            <div>
+                <a
+                    className={Styles['header-logo']}
+                    href="/"
+                >
+                    <img
+                        src={allbirdsLogo}
+                        alt='Allbirds Logo'
+                    />
+                </a>
+                <nav>
+                    <div className={Styles['autocomplete-full']}>
+                        <AutoComplete />
+                    </div>
+                    <div className={`
+                        ${Styles['header-icon']}
+                        ${Styles.profile}
+                    `}></div>
+                    <div className={`
+                        ${Styles['header-icon']}
+                        ${Styles.cart}
+                    `}></div>
+                </nav>
+            </div>
+            <div className={Styles['autocomplete-mobile']}>
                 <AutoComplete />
-                <div className={`
-                    ${Styles['header-icon']}
-                    ${Styles.profile}
-                `}></div>
-                <div className={`
-                    ${Styles['header-icon']}
-                    ${Styles.cart}
-                `}></div>
-            </nav>
+            </div>
         </header>
     );
 };

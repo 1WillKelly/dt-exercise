@@ -7,19 +7,112 @@
     padding: 0 $gutter-width;
     background-color: #F6F6F6;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
     h1 {
         position: relative;
         z-index: 1;
-        margin: 110px 0 0 72px;
-        font-size: 80px;
+        margin-left: 102px;
+        font-size: 90px;
+        font-family: 'Rubik', sans-serif;
         color: $color-secondary;
+        line-height: 1em;
     }
 
     img {
         position: absolute;
-        right: 10%;
+        right: 4.5%;
         bottom: -180px;
         height: 850px;
+    }
+}
+
+@media(max-width: 1360px) {
+    .marquee-banner {
+
+        h1 {
+            font-size: 70px;
+        }
+    
+        img {
+            bottom: -147px;
+            height: 700px;
+        }
+    }
+}
+
+@media(max-width: 1020px) {
+    .marquee-banner {
+        padding: 0 $gutter-width-sm;
+    }
+}
+
+@media(max-width: 1080px) {
+    .marquee-banner {
+        height: 350px;
+
+        h1 {
+            font-size: 62px;
+            margin-left: 10px;
+        }
+    
+        img {
+            height: 650px;
+            right: 1%;
+        }
+    }
+}
+
+@media(max-width: 860px) {
+    .marquee-banner {
+
+        h1 {
+            font-size: 55px;
+            margin-left: 4%;
+            margin-top: -50px;
+        }
+
+        img {
+            height: 550px;
+            bottom: -98px;
+            right: calc(28% - 260px);
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .marquee-banner {
+        height: 220px;
+
+        h1 {
+            font-size: 36px;
+            margin-left: 1%;
+            margin-top: calc(20% - 140px);
+        }
+
+        img {
+            height: 400px;
+            bottom: -86px;
+            right: calc(20% - 160px);
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .marquee-banner {
+        height: 120px;
+        justify-content: center;
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        img {
+            display: none;
+        }
     }
 }

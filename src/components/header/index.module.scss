@@ -1,13 +1,15 @@
 @import "../../_variables.scss";
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: $header-height;
-    width: 100%;
-    padding: 0 $gutter-width;
-    background-color: white;
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $header-height;
+        width: 100%;
+        padding: 0 $gutter-width;
+        background-color: white;
+    }
 
     .header-logo img {
         width: 100px;
@@ -39,6 +41,41 @@ nav {
         &:hover,
         &:active {
             opacity: 1;
+        }
+    }
+}
+
+.autocomplete-mobile {
+    display: none;
+}
+
+@media(max-width: 1020px) {
+    header > div {
+        padding: 0 $gutter-width-sm;
+    }
+}
+
+@media(max-width: 600px) {
+    header > div {
+        height: auto;
+        
+        &:first-child {
+            padding-top: 18px;
+        }
+
+        &:last-child {
+            padding-top: 12px;
+            padding-bottom: 18px;
+        }
+    }
+    .autocomplete-full {
+        display: none;
+    }
+    .autocomplete-mobile {
+        display: block;
+
+        input {
+            width: 100% !important;
         }
     }
 }

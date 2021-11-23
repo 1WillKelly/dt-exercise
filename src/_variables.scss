@@ -1,4 +1,4 @@
-/* Fonts */
+/* Local Fonts */
 
 @font-face {
     font-family: 'Helvetica-Neue';
@@ -19,13 +19,17 @@ $gutter-width: 36px;
 $marquee-height: 400px;
 $sidebar-width: 366px;
 
+/* max-width: 1020px */
+$gutter-width-sm: 24px;
+$sidebar-width-sm: 280px;
+
 /* Colors */
 
 $main-background-color: #DEE0E3;
 $border-color: #DEDEDE;
 
-$color-primary: #DB8352;
-$color-secondary: #333940;
+$color-primary: #DE611B;
+$color-secondary: #25374b;
 
 $color-black-90: rgba(0,0,0,0.9);
 $color-black-80: rgba(0,0,0,0.8);

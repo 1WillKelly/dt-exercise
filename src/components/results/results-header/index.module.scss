@@ -1,6 +1,7 @@
 @import "../../../_variables.scss";
 
 $toggle-height: 42px;
+$toggle-height-med: 36px;
 
 .results-header {
     display: flex;
@@ -15,7 +16,8 @@ $toggle-height: 42px;
 .mens-womens-toggle {
     display: flex;
     align-items: center;
-    height: 42px;
+    height: $toggle-height;
+    padding: 2px;
     border-radius: 50px;
     background-color: rgba($color-secondary, 0.05);
 
@@ -23,14 +25,14 @@ $toggle-height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 14px;
         color: rgba($color-secondary, 0.7);
         width: 160px;
+        height: 100%;
+        border-radius: 50px;
 
         &.active {
             color: $color-secondary;
-            height: calc(#{$toggle-height} - 4px);
-            border-radius: 50px;
-            margin-left: 2px;
             background-color: white;
             box-shadow: 0 3px 10px -2px rgba(0,0,0,0.09);
         }
@@ -43,6 +45,38 @@ $toggle-height: 42px;
 
     p {
         color: $color-black-60;
+        font-size: 14px;
         margin-right: 10px;
+    }
+}
+
+@media(max-width: 1020px) {
+    .results-header {
+        padding: 0 $gutter-width-sm;
+    }
+}
+
+@media(max-width: 920px) {
+    .mens-womens-toggle {
+        height: $toggle-height-med;
+    
+        span {
+            font-size: 13px;
+            width: auto;
+            padding: 0 1.5em;
+        }
+    }
+
+    .sort-by p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 600px) {
+    .results-header {
+        justify-content: center;
+    }
+    .sort-by {
+        display: none;
     }
 }

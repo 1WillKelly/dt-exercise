@@ -52,3 +52,30 @@
         }
     }
 }
+
+@media(max-width: 1020px) {
+    .filter-sidebar {
+        width: $sidebar-width-sm;
+        padding: $gutter-width $gutter-width-sm;
+    }
+
+    .filter-group.size ul {
+        li {
+            margin: 0 7px 7px 0;
+
+            &:nth-child(6n) {
+                margin-right: 7px;
+            }
+
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 820px) {
+    .filter-sidebar {
+        display: none;
+    }
+}

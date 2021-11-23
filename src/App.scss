@@ -75,11 +75,6 @@ body {
     margin: 0 auto;
 }
 
-h1 {
-    font-weight: 600;
-    letter-spacing: -0.03em;
-}
-
 h2,
 h3,
 h4,
@@ -92,6 +87,26 @@ h6 {
 button:focus,
 input:focus {
     outline: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 100%;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background-color: $color-secondary;
+    transition: all .25s;
+
+    &:active,
+    &:hover {
+        background-color: darken($color-secondary, 14%);
+    }
 }
 
 // Homepage styles

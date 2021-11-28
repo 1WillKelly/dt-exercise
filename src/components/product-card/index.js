@@ -8,6 +8,7 @@ const ProductCard = (props) => {
         category,
         title,
         price,
+        id,
     } = props;
     const rating = props.className
         ? Styles.stars + " " + props.className
@@ -17,10 +18,10 @@ const ProductCard = (props) => {
 
     return (
         <>
-            <div className={Styles['product-card']}>
+            <div role="listitem" className={Styles['product-card']}>
                 <div className={Styles['product-card-upper']}>
                     <div className={Styles['image-wrapper']}>
-                        <img src={product_image} />
+                        <img src={product_image} alt={'Product image for ' + title}/>
                     </div>
                     <div className={Styles['product-info']}>
                         <p className={Styles.category}>{category}</p>
@@ -33,15 +34,19 @@ const ProductCard = (props) => {
                             <span className="star"></span>
                             <span className="star"></span>
                         </div>
+                        <span className={Styles.id}>#{id}</span>
                     </div>
                 </div>
-                {/* <span>{id}</span> */}
-                <button onClick={() => setModalOpened(true)}>View Details</button>
+                <button onClick={() => setModalOpened(true)} title="View Details">View Details</button>
             </div>
             <Modal
                 closeHandler={() => setModalOpened(false)}
                 isOpen={modalOpened}
-                modalContent={price}
+                modal_product_image={product_image}
+                modal_category={category}
+                modal_title={title}
+                modal_price={price}
+                modal_rating={rating}
             />
         </>
     );

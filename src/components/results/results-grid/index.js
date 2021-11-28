@@ -17,27 +17,30 @@ const ResultsGrid = () => {
 
     return (
         <div className={Styles['results-grid-wrapper']}>
-            <div className={Styles['results-grid']}>
+            <div role="list" className={Styles['results-grid']}>
                 <ProductCard
                     product_image={allbirds1}
                     category="Running Shoes"
-                    title="Men's Tree Dashers"
+                    title="Women's Tree Dashers"
                     price="85"
                     className={Styles['stars_4']}
+                    id="0001"
                 />
                 <ProductCard
                     product_image={allbirds6}
                     category="Everyday Shoes"
-                    title="Men's Wool Runner Casual"
+                    title="Women's Wool Runner Casual"
                     price="110"
                     className={Styles['stars_5']}
+                    id="0008"
                 />
                 <ProductCard
-                    product_image={allbirds3}
+                    product_image={allbirds2}
                     category="Running Shoes"
-                    title="Men's Trail Runners SWT"
-                    price="85"
-                    className={Styles['stars_5']}
+                    title="Women's Wool Dasher Mizzles"
+                    price="100"
+                    className={Styles['stars_4-5']}
+                    id="0034"
                 />
                 <ProductCard
                     product_image={allbirds4}
@@ -45,62 +48,71 @@ const ResultsGrid = () => {
                     title="Men’s Wool Dasher Fluffs"
                     price="100"
                     className={Styles['stars_4']}
+                    id="0065"
                 />
                 <ProductCard
                     product_image={allbirds5}
                     category="Everyday Shoes"
-                    title="Men's Wool Runners"
+                    title="Women's Wool Runners"
                     price="90"
                     className={Styles['stars_4-5']}
+                    id="0012"
                 />
                 <ProductCard
                     product_image={allbirds8}
                     category="Everyday Shoes"
-                    title="Men's Wool Pipers"
+                    title="Women's Wool Pipers"
                     price="75"
                     className={Styles['stars_4-5']}
+                    id="0011"
                 />
                 <ProductCard
                     product_image={allbirds9}
                     category="Slip-Ons"
-                    title="Men's Tree Loungers"
+                    title="Women's Tree Loungers"
                     price="75"
                     className={Styles['stars_5']}
+                    id="0002"
                 />
                 <ProductCard
                     product_image={allbirds10}
                     category="Slip-Ons"
-                    title="Men's Wool Loungers"
+                    title="Women's Wool Loungers"
                     price="90"
                     className={Styles['stars_4']}
-                />
-                <ProductCard
-                    product_image={allbirds2}
-                    category="Running Shoes"
-                    title="Men's Wool Dasher Mizzles"
-                    price="100"
-                    className={Styles['stars_4-5']}
+                    id="0023"
                 />
                 <ProductCard
                     product_image={allbirds11}
                     category="Slip-Ons"
-                    title="Men's Wool Lounger Fluffs"
+                    title="Women's Wool Lounger Fluffs"
                     price="105"
                     className={Styles['stars_4-5']}
+                    id="0015"
                 />
                 <ProductCard
                     product_image={allbirds12}
                     category="High-Tops"
-                    title="Men's Wool Piper Mids"
+                    title="Women's Wool Piper Mids"
                     price="120"
                     className={Styles['stars_5']}
+                    id="0025"
                 />
                 <ProductCard
                     product_image={allbirds7}
                     category="Everyday Shoes"
-                    title="Men's Tree Runners Casual"
+                    title="Women's Tree Runners Casual"
                     price="105"
                     className={Styles['stars_4']}
+                    id="0004"
+                />
+                <ProductCard
+                    product_image={allbirds3}
+                    category="Running Shoes"
+                    title="Women's Trail Runners SWT"
+                    price="85"
+                    className={Styles['stars_5']}
+                    id="0032"
                 />
             </div>
         </div>

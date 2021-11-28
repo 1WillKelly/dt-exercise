@@ -1,8 +1,7 @@
-import CustomCheckbox from '../custom-checkbox';
-import SizeSelector from '../size-selector';
+import Styles from './index.module.scss';
+import FGColor from './filter-groups/fg-color';
 import FGSize from './filter-groups/fg-size';
 import FGType from './filter-groups/fg-type';
-import Styles from './index.module.scss';
 
 const Filters = () => {
 
@@ -21,7 +20,18 @@ const Filters = () => {
                 ${Styles['filter-group']}
                 ${Styles.size}
             `}>
-                <FGSize />
+                <FGSize
+                    title="Size"
+                />
+            </section>
+
+            <section className={`
+                ${Styles['filter-group']}
+                ${Styles.color}
+            `}>
+                <FGColor
+                    title="Color"
+                />
             </section>
         </aside>
     );

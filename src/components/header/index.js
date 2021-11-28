@@ -10,6 +10,8 @@ const Header = () => {
                 <a
                     className={Styles['header-logo']}
                     href="/"
+                    title="Home"
+                    aria-label="Home"
                 >
                     <img
                         src={allbirdsLogo}

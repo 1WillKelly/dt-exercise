@@ -1,10 +1,14 @@
 import SizeSelector from '../../../size-selector';
 
-const FGSize = () => {
+const FGSize = (props) => {
+
+    const {
+        title,
+    } = props;
 
     return (
         <>
-            <h3>Size</h3>
+            <h3>{title}</h3>
             <ul>
                 <li>
                     <SizeSelector

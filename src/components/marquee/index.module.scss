@@ -1,118 +1,139 @@
-@import "../../_variables.scss";
+@import '../../_variables.scss';
+
+$shoe-image-size: 200px;
 
 .marquee-banner {
     position: relative;
-    height: $marquee-height;
+    height: 250px;
     width: 100%;
     padding: 0 $gutter-width;
     background-color: #F6F6F6;
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 
     h1 {
         position: relative;
         z-index: 1;
-        margin-left: 102px;
-        font-size: 90px;
+        font-size: 70px;
         font-family: 'Rubik', sans-serif;
+        font-style: italic;
         color: $color-secondary;
         line-height: 1em;
     }
-
-    img {
-        position: absolute;
-        right: 4.5%;
-        bottom: -180px;
-        height: 850px;
-    }
 }
 
-@media(max-width: 1360px) {
-    .marquee-banner {
+$count: 8;
+$multiplier: 3;
+$duration: calc(#{$count} * #{$multiplier}s);
 
-        h1 {
-            font-size: 70px;
-        }
-    
+.fading-shoes {
+    display: flex;
+    justify-content: space-between;
+    width: calc(#{$shoe-image-size} * 4 + 60px);
+
+    .shoe-box {
+        position: relative;
+        height: $shoe-image-size;
+        width: $shoe-image-size;
+        animation-name: appear;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
         img {
-            bottom: -147px;
-            height: 700px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: fade;
+            animation-iteration-count: infinite;
+            animation-duration: $duration;
+        }
+
+        &:nth-child(1) {
+            animation-delay: 0.25s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.75s;
+        }
+        &:nth-child(4) {
+            animation-delay: 1s;
         }
     }
 }
 
-@media(max-width: 1020px) {
-    .marquee-banner {
-        padding: 0 $gutter-width-sm;
+@media(max-width: 1320px) {
+    .fading-shoes {
+        width: calc(#{$shoe-image-size} * 3 + 30px);
+
+        .shoe-box:nth-child(4) {
+            display: none;
+        }
     }
 }
 
 @media(max-width: 1080px) {
-    .marquee-banner {
-        height: 350px;
+    .fading-shoes {
+        width: calc(#{$shoe-image-size} * 2 + 10px);
 
-        h1 {
-            font-size: 62px;
-            margin-left: 10px;
-        }
-    
-        img {
-            height: 650px;
-            right: 1%;
+        .shoe-box:nth-child(3) {
+            display: none;
         }
     }
 }
 
-@media(max-width: 860px) {
+@media(max-width: 820px) {
+
     .marquee-banner {
-
+        height: 200px;
+    
         h1 {
-            font-size: 55px;
-            margin-left: 4%;
-            margin-top: -50px;
+            font-size: 60px;
+            text-align: center;
         }
+    }
 
-        img {
-            height: 550px;
-            bottom: -98px;
-            right: calc(28% - 260px);
-        }
+    .fading-shoes {
+        display: none;
     }
 }
 
 @media(max-width: 600px) {
+
     .marquee-banner {
-        height: 220px;
-
+        height: 140px;
+    
         h1 {
-            font-size: 36px;
-            margin-left: 1%;
-            margin-top: calc(20% - 140px);
-        }
-
-        img {
-            height: 400px;
-            bottom: -86px;
-            right: calc(20% - 160px);
+            font-size: 40px;
         }
     }
 }
 
-@media(max-width: 380px) {
-    .marquee-banner {
-        height: 120px;
-        justify-content: center;
 
-        h1 {
-            text-align: center;
-            font-size: 36px;
-            margin-left: 0;
-            margin-top: 0;
-        }
+// Animation stuff
 
-        img {
-            display: none;
+@for $i from 1 through $count {
+    .shoe-box img {
+    
+        &:nth-child(#{$i}) {
+            animation-delay: calc(#{$i} * -#{$multiplier}s);
         }
     }
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    8% {opacity: 1;}
+    16% {opacity: 1;}
+    24% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

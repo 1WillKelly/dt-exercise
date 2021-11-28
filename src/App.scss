@@ -84,15 +84,17 @@ h6 {
     letter-spacing: -0.01em;
 }
 
-button:focus,
-input:focus {
-    outline: none;
+*:focus-visible {
+    outline: 3px solid lighten($color-primary, 10%) !important;
+    box-shadow: 0 0 8px lighten($color-primary, 10%);
+    transition: none;
 }
 
 button {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     height: 44px;
     width: 100%;
     border-radius: 100px;
@@ -105,7 +107,7 @@ button {
 
     &:active,
     &:hover {
-        background-color: darken($color-secondary, 14%);
+        background-color: lighten($color-secondary, 18%);
     }
 }
 

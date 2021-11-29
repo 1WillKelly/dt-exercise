@@ -9,7 +9,7 @@ const Header = () => {
             <div>
                 <a
                     className={Styles['header-logo']}
-                    href="/"
+                    href="#"
                     title="Home"
                     aria-label="Home"
                 >

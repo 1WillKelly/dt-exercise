@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dt-exercise/static/css/main.475e40f4.chunk.css",
-    "main.js": "/dt-exercise/static/js/main.49835bbe.chunk.js",
-    "main.js.map": "/dt-exercise/static/js/main.49835bbe.chunk.js.map",
+    "main.css": "/dt-exercise/static/css/main.880c3abc.chunk.css",
+    "main.js": "/dt-exercise/static/js/main.099d4592.chunk.js",
+    "main.js.map": "/dt-exercise/static/js/main.099d4592.chunk.js.map",
     "runtime-main.js": "/dt-exercise/static/js/runtime-main.9388b21f.js",
     "runtime-main.js.map": "/dt-exercise/static/js/runtime-main.9388b21f.js.map",
     "static/js/2.7f1aa7a4.chunk.js": "/dt-exercise/static/js/2.7f1aa7a4.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.9151d54d.chunk.js": "/dt-exercise/static/js/3.9151d54d.chunk.js",
     "static/js/3.9151d54d.chunk.js.map": "/dt-exercise/static/js/3.9151d54d.chunk.js.map",
     "index.html": "/dt-exercise/index.html",
-    "static/css/main.475e40f4.chunk.css.map": "/dt-exercise/static/css/main.475e40f4.chunk.css.map",
+    "static/css/main.880c3abc.chunk.css.map": "/dt-exercise/static/css/main.880c3abc.chunk.css.map",
     "static/js/2.7f1aa7a4.chunk.js.LICENSE.txt": "/dt-exercise/static/js/2.7f1aa7a4.chunk.js.LICENSE.txt",
     "static/media/index.module.scss": "/dt-exercise/static/media/start-sprite.59c4d221.svg",
     "static/media/allbirds-logo.818aff59.svg": "/dt-exercise/static/media/allbirds-logo.818aff59.svg",
@@ -39,7 +39,7 @@
   "entrypoints": [
     "static/js/runtime-main.9388b21f.js",
     "static/js/2.7f1aa7a4.chunk.js",
-    "static/css/main.475e40f4.chunk.css",
-    "static/js/main.49835bbe.chunk.js"
+    "static/css/main.880c3abc.chunk.css",
+    "static/js/main.099d4592.chunk.js"
   ]
 }
